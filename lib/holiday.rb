@@ -63,7 +63,7 @@ def all_supplies_in_holidays(holiday_hash)
   supplies = []
   holiday_hash.each do |season, holidays|
     binding.pry
-    supplies << season.collect {|holiday, supply_array| supply_array}
+    supplies << holidays.collect {|holiday, supply_array| supply_array}
   end
   return supplies.flatten
 end
