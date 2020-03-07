@@ -42,8 +42,7 @@ def add_new_holiday_with_supplies(holiday_hash, season, holiday_name, supply_arr
   if !holiday_hash[season].has_key?(holiday_name)
     holiday_hash[season][holiday_name] = []
   end
-  holiday_hash[season][holiday_name] << supply_array
-  holiday_hash[season][holiday_name].flatten
+  supply_array.each {|supply| holiday_hash[season][holiday_name] << supply}
   return holiday_hash
 end
 
