@@ -39,7 +39,7 @@ end
 def add_new_holiday_with_supplies(holiday_hash, season, holiday_name, supply_array)
   # code here
   # remember to return the updated hash
-  if !holiday_hash[:season].key?(holiday_name)
+  if !holiday_hash[:season].has_key?(holiday_name)
     holiday_hash[:season][:holiday_name] = []
   end
   holiday_hash[:season][:holiday_name] << supply_array
