@@ -60,12 +60,13 @@ def all_supplies_in_holidays(holiday_hash)
   # Summer:
   #   Fourth Of July: Fireworks, BBQ
   # etc.
-  supplies = []
+  
   holiday_hash.each do |season, holidays|
-    holidays.each {|holiday, supply_array| supplies << supply_array}
+    puts "#{season}:"
+    holidays.each do |holiday, supply_array|
+      puts "#{holiday}: #{supply_array.join(",")}"
+    end
   end
-  # binding.pry
-  return supplies.flatten
 end
 
 def all_holidays_with_bbq(holiday_hash)
