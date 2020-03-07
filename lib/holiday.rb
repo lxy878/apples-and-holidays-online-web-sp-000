@@ -66,7 +66,7 @@ def all_supplies_in_holidays(holiday_hash)
     holidays.each do |holiday, supply_array|
       fixed_name = name_fix(holiday)
       binding.pry
-      puts "  #{fixd_name}: #{supply_array.join(", ")}"
+      puts "  #{fixed_name}: #{supply_array.join(", ")}"
     end
   end
 end
