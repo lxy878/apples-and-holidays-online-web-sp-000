@@ -60,10 +60,11 @@ def all_supplies_in_holidays(holiday_hash)
   # Summer:
   #   Fourth Of July: Fireworks, BBQ
   # etc.
-  supplies = holiday_hash.collect do |season, holidays|
-    season.values.flatten
+  supplies = []
+  holiday_hash.each do |season, holidays|
+    supplies << season.collect {|holiday, supply_array| supply_array}
   end
-  return supplies
+  return supplies.flatten
 end
 
 def all_holidays_with_bbq(holiday_hash)
