@@ -48,7 +48,8 @@ end
 
 def all_winter_holiday_supplies(holiday_hash)
   # return an array of all of the supplies that are used in the winter season
-  supplies = holiday_hash[:winter].collect {|holidays, supplies| supplies}
+  supplies = []
+  holiday_hash[:winter].each {|holidays, supplies| supplies}
   binding.pry
 end
 
